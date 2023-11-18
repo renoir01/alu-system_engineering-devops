@@ -1,0 +1,3 @@
+ServerHost *
+        AllowPasswordAuth no
+        AuthKeyFile ~/.ssh/school
