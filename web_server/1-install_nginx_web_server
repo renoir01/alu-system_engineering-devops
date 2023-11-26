@@ -10,7 +10,7 @@ apt-get install -y nginx
 mkdir -p /var/www/html
 echo "Holberton School for the win!" > /var/www/html/index.html
 
-# Configure Nginx to serve the content
+# Configure Nginx to serve the content with explicit return code 200
 cat > /etc/nginx/sites-available/default <<EOF
 server {
     listen 80 default_server;
@@ -19,7 +19,7 @@ server {
     index index.html index.htm;
 
     location / {
-        try_files \$uri \$uri/ =404;
+        try_files \$uri \$uri/ =200;
     }
 }
 EOF
