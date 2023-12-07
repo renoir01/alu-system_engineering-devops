@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+# Corrects nginx configuration and restarts it
 sudo sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
 sudo service nginx stop
 sudo service nginx start
 echo "" > /run/nginx.pid
+service nginx status
