@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Corrects configuration of nginx server to resolve bugs
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
-kill "$(pgrep ' nginx' | head -1)"
+ln -s /etc/nginx/sites-available/my_site /etc/nginx/sites-enabled/
+rm /etc/nginx/sites-enabled/default
+service nginx restart
